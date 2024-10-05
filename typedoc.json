@@ -1,0 +1,18 @@
+{
+  "entryPoints": ["./src/index.ts"],
+  "out": "./docs",
+  "disableSources": true,
+  "plugin": ["./dist/index.js", "typedoc-plugin-replace-text"],
+  "renameDocuments": {
+    "./LICENSE": "License Renamed"
+  },
+  "replaceText": {
+    "replacements": [
+      {
+        "pattern": "#+ Example(?:(?!^#).)*",
+        "flags": "gmis",
+        "replace": ""
+      }
+    ]
+  }
+}
